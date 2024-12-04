@@ -1,0 +1,8 @@
+#navigation-container, ul {
+    align-self: flex-end;
+    list-style-type: none;
+}
+
+li {
+    margin: 10px;
+}
