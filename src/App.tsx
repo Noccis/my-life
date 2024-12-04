@@ -2,8 +2,9 @@ import './App.css'
 import Header from './components/Header'
 import { Routes, Route} from "react-router-dom"
 import Landing from './pages/LandingPage'
-import Notes from './pages/Notes'
+import Notes from './pages/NotesPage'
 import LandingPage from './pages/LandingPage'
+import NotesPage from './pages/NotesPage'
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
       <main>
         <Routes>
           <Route path='/' element={ <LandingPage /> }/>
-          <Route path='/notes' element={ <Notes /> } />
+          <Route path='/notes' element={ <NotesPage /> } />
         </Routes>
       </main>
     </div>
