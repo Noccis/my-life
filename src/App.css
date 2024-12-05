@@ -18,6 +18,18 @@
   flex-direction: row;
 }
 
+.flex-align-center {
+  align-items: center;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
 .main-padding {
   padding: 3%;
+}
+
+.content-containers {
+  min-height: 300px;
 }

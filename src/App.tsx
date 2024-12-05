@@ -5,6 +5,7 @@ import LandingPage from './pages/LandingPage'
 import NotesPage from './pages/NotesPage'
 import PrivateRoute from './components/PrivateRoute';
 import { AuthProvider } from './context/AuthContext';
+import ProfilePage from './pages/ProfilePage'
 
 function App() {
   return (
@@ -22,6 +23,14 @@ function App() {
             <NotesPage />
           </PrivateRoute>
         }
+      />
+      <Route 
+      path='/profile'
+      element={ 
+        <PrivateRoute>
+          <ProfilePage />
+        </PrivateRoute>
+       } 
       />
         </Routes>
       </main>
