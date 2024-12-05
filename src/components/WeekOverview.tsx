@@ -97,18 +97,19 @@ const WeekOverview: React.FC = () => {
 
   return (
     <div id="week-overview" className="flex-column">
+        <h3 className="margin-t-b">Denna vecka:</h3>
       {dayOrder.map((day) => (
         <div key={day} className="day">
           <h3 className="margin-t-b">{day}</h3>
           <ul className="day-ul">
             {(activities[day] || []).map((activity, index) => (
-              <li key={index}>
+              <li key={index} className="note-item">
                 {activity}
                 <button
-                  className="day-button"
+                  className="delete-btn"
                   onClick={() => removeActivity(day, index)}
                 >
-                  Ta bort
+                  🗑️
                 </button>
               </li>
             ))}
@@ -116,7 +117,7 @@ const WeekOverview: React.FC = () => {
           <input
             className="input-form margin-top"
             type="text"
-            placeholder={`Lägg till aktivitet på ${day}`}
+            placeholder={`Lägg till aktivitet`}
             onKeyDown={(e) => {
               if (
                 e.key === "Enter" &&

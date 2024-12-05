@@ -1,6 +1,6 @@
 #week-overview {
     width: 40%;
-    background-color: aliceblue;
+    background-color: #DCC6F4;
     padding: 15px;
 }
 
@@ -9,7 +9,7 @@
     border: 1px solid #ccc;
     border-radius: 8px;
     background-color: white;
-    margin: 3px;
+    margin: 4px 10px 4px 10px;
 }
 
 .day-ul {
