@@ -8,6 +8,7 @@ const Navigation = () => {
         <ul className='flex-row'>
             <li><NavLink to="/">Home</NavLink></li>
             <li><NavLink to="/notes">Notes</NavLink></li>
+            <li><NavLink to="/profile">Profile</NavLink></li>
         </ul>
     </div>
   )
