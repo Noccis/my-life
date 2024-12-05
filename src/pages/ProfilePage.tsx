@@ -1,5 +1,5 @@
 import React from "react";
-import Auth from "../components/Auth";
+import Authenticator from "../components/Authenticator";
 
 const ProfilePage = () => {
   return (
@@ -13,7 +13,7 @@ const ProfilePage = () => {
     content-containers"
     >
       <h2 className="main-padding">Profile</h2>
-      <Auth />
+      <Authenticator />
     </div>
   );
 };
