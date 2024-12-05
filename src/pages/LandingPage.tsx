@@ -1,5 +1,5 @@
 import React from 'react'
-import Auth from '../components/Auth';
+import Authenticator from '../components/Authenticator';
 
 const LandingPage = () => {
   return (
@@ -8,11 +8,9 @@ const LandingPage = () => {
         <p>Här ska det finnas:</p>
         <ul>
             <li>Överblick över veckan</li>
-            <li>Länk till "kom ihåg" sidan</li>
-            <li>Knapp som lägger till händelser i veckan</li>
-            <li>Länk till Leons sida</li>
+            <li>Knapp som lägger till händelser i veckan</li>       
         </ul>
-        <Auth />
+        <Authenticator />
     </div>
   )
 }
