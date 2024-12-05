@@ -1,4 +1,5 @@
 import React from 'react'
+import Auth from '../components/Auth';
 
 const LandingPage = () => {
   return (
@@ -11,6 +12,7 @@ const LandingPage = () => {
             <li>Knapp som lägger till händelser i veckan</li>
             <li>Länk till Leons sida</li>
         </ul>
+        <Auth />
     </div>
   )
 }

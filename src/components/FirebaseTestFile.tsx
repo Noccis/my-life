@@ -7,7 +7,7 @@ const FirebaseTestFile: React.FC = () => {
 
   useEffect(() => {
     const testFirestore = async () => {
-      const testDocRef = doc(db, 'test', 'message'); // Skapa en referens till ett dokument
+      const testDocRef = doc(db, 'test', 'message');
 
       try {
         // Skriv data till Firestore
@@ -17,7 +17,7 @@ const FirebaseTestFile: React.FC = () => {
         // Läs data från Firestore
         const docSnap = await getDoc(testDocRef);
         if (docSnap.exists()) {
-          setMessage(docSnap.data()?.message); // Sätt meddelandet från Firestore
+          setMessage(docSnap.data()?.message);
         } else {
           console.log('No such document!');
         }
