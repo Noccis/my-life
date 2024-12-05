@@ -8,6 +8,20 @@
   height: 100vh;
 }
 
+/* 
+    Colors
+*/
+
+.button-color {
+  background-color: #A569BD;
+  color: white;
+  border: none;
+}
+
+/* 
+    Flex classes
+*/
+
 .flex-column {
   display: flex;
   flex-direction: column;
@@ -26,10 +40,43 @@
   justify-content: center;
 }
 
+/* 
+    Padding
+*/
+
 .main-padding {
   padding: 3%;
 }
 
+/* 
+    Margin
+*/
+
+.margin-t-b {
+  margin: 10px 0 10px 0;
+}
+
+.margin-bottom {
+  margin-bottom: 10px;
+}
+
+.margin-left {
+  margin-left: 10px;
+}
+
+/* 
+    All pages
+*/
+
 .content-containers {
   min-height: 300px;
+}
+
+/* 
+    Input forms
+*/
+
+.input-form {
+  padding: 8px;
+  border-radius: 5px;
 }
