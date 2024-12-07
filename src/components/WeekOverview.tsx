@@ -26,7 +26,12 @@ const WeekOverview: React.FC = () => {
   useEffect(() => {
     if (!user) return;
 
-    const userCollectionRef = collection(db, "users", user.uid, "weekActivities");
+    const userCollectionRef = collection(
+      db,
+      "users",
+      user.uid,
+      "weekActivities"
+    );
 
     const unsubscribe = onSnapshot(
       userCollectionRef,
@@ -96,40 +101,42 @@ const WeekOverview: React.FC = () => {
   ];
 
   return (
-    <div id="week-overview" className="flex-column">
-        <h3 className="margin-t-b">Denna vecka:</h3>
-      {dayOrder.map((day) => (
-        <div key={day} className="day">
-          <h3 className="margin-t-b">{day}</h3>
-          <ul className="day-ul">
-            {(activities[day] || []).map((activity, index) => (
-              <li key={index} className="note-item">
-                {activity}
-                <button
-                  className="delete-btn"
-                  onClick={() => removeActivity(day, index)}
-                >
-                  🗑️
-                </button>
-              </li>
-            ))}
-          </ul>
-          <input
-            className="input-form margin-top"
-            type="text"
-            placeholder={`Lägg till aktivitet`}
-            onKeyDown={(e) => {
-              if (
-                e.key === "Enter" &&
-                (e.target as HTMLInputElement).value.trim() !== ""
-              ) {
-                addActivity(day, (e.target as HTMLInputElement).value);
-                (e.target as HTMLInputElement).value = ""; // Rensa inputfältet
-              }
-            }}
-          />
-        </div>
-      ))}
+    <div id="week-overview" className="flex-column flex-align-center flex-justify-center">
+      <h3 className="margin-t-b">Denna vecka:</h3>
+      <div id="day-container" className="flex-row">
+        {dayOrder.map((day) => (
+          <div key={day} className="day flex-column flex-align-center">
+            <h3 className="margin-bottom">{day}</h3>
+            <ul className="day-ul">
+              {(activities[day] || []).map((activity, index) => (
+                <li key={index} className="note-item">
+                  {activity}
+                  <button
+                    className="delete-btn"
+                    onClick={() => removeActivity(day, index)}
+                  >
+                    🗑️
+                  </button>
+                </li>
+              ))}
+            </ul>
+            <input
+              className="input-form day-input margin-top"
+              type="text"
+              placeholder={`Skriv här`}
+              onKeyDown={(e) => {
+                if (
+                  e.key === "Enter" &&
+                  (e.target as HTMLInputElement).value.trim() !== ""
+                ) {
+                  addActivity(day, (e.target as HTMLInputElement).value);
+                  (e.target as HTMLInputElement).value = "";
+                }
+              }}
+            />
+          </div>
+        ))}
+      </div>
     </div>
   );
 };
