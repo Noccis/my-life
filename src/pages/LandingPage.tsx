@@ -9,7 +9,7 @@ const LandingPage = () => {
   return (
     <div
       id="landing-page"
-      className="main-padding flex-row flex-align-center content-containers"
+      className="main-padding flex-row flex-align-center flex-justify-center content-containers"
     >
       {user ? (
         <WeekOverview />
