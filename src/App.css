@@ -8,6 +8,10 @@
   height: 100vh;
 }
 
+.list-style-none {
+  list-style-type: none;
+}
+
 /* 
     Colors
 */

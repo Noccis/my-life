@@ -1,6 +1,5 @@
-#navigation-container, ul {
+#navigation-container {
     align-self: flex-end;
-    list-style-type: none;
 }
 
 li {
