@@ -14,7 +14,7 @@ function App() {
       
       <Header />
       <AuthProvider>
-      <main>
+      <main className='flex-column flex-align-center'>
         <Routes>
         <Route path="/" element={<LandingPage />} />
       <Route
