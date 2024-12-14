@@ -1,4 +1,6 @@
-
+#notes-page {
+  max-width: 700px;
+}
 
 .notes-list {
     list-style-type: none;
