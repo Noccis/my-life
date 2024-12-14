@@ -1,0 +1,45 @@
+#week-overview {
+    width: 90vw;
+    background-color: #DCC6F4;
+    padding: 15px;
+}
+
+#day-container {
+    width: 95%;
+    justify-self: center;
+    align-self: center;
+}
+
+.day {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: white;
+    margin: 2px 3px 4px 3px;
+    width: 12%;
+}
+
+.day-ul {
+    list-style-type: none;
+    padding: 0;
+    flex-grow: 1;
+    width: 100%;
+}
+
+.day-input {
+    margin-top: 10px;
+    padding: 5px;
+}
+
+.day-button {
+    margin-left: 10px;
+    background-color: #A569BD;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.day-input {
+    max-width: 80%;
+}

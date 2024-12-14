@@ -1,0 +1,45 @@
+#notes-page {
+  max-width: 700px;
+}
+
+.notes-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .note-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s;
+    position: relative;
+  }
+  
+  .note-item:hover {
+    background-color: #f1f1f1;
+  }
+  
+  .note-text {
+    flex-grow: 1;
+  }
+  
+  .delete-btn {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: #ff5252;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+  }
+  
+  .note-item:hover .delete-btn {
+    display: block;
+  }
+  
