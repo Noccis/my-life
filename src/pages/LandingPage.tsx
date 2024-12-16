@@ -1,4 +1,3 @@
-import React from "react";
 import Authenticator from "../components/Authenticator";
 import WeekOverview from "../components/WeekOverview";
 import { useAuth } from "../context/AuthContext";

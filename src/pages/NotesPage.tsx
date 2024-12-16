@@ -1,4 +1,3 @@
-import React from 'react'
 import AddNote from '../components/AddNote';
 import NotesList from '../components/NotesList';
 import "../styling/notesPage.css"
