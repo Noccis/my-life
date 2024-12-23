@@ -1,4 +1,5 @@
 import Authenticator from "../components/Authenticator";
+import SelectedDay from "../components/SelectedDay";
 import WeekOverview from "../components/WeekOverview";
 import { useAuth } from "../context/AuthContext";
 
@@ -11,7 +12,10 @@ const LandingPage = () => {
       className="main-padding flex-row flex-align-center flex-justify-center content-containers"
     >
       {user ? (
-        <WeekOverview />
+        <div>
+          <SelectedDay />
+          <WeekOverview />
+        </div>
       ) : (
         <div>
           <h3 className="margin-bottom-large">
