@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { db } from "../configuration";
+import { db } from "../../../configuration";
 import {
   doc,
   setDoc,
@@ -12,8 +12,8 @@ import {
   QuerySnapshot,
   DocumentData,
 } from "firebase/firestore";
-import { useAuth } from "../context/AuthContext";
-import "../styling/weekOverview.css";
+import { useAuth } from "../../../context/AuthContext";
+import "../../../styling/weekOverview.css";
 
 interface DayActivities {
   [key: string]: string[];

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { db, auth } from '../configuration';
+import { db, auth } from '../../../configuration';
 import { collection, onSnapshot, deleteDoc, doc } from 'firebase/firestore';
 import AddTodo from './AddTodo';
 import { format } from "date-fns";
