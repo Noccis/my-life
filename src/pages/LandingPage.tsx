@@ -1,6 +1,6 @@
 import Authenticator from "../components/Authenticator";
-import TodoContainer from "../components/TodoContainer";
-import WeekOverview from "../components/WeekOverview";
+import TodoContainer from "../feature/calendar/components/TodoContainer";
+import WeekOverview from "../feature/calendar/components/WeekOverview";
 import { useAuth } from "../context/AuthContext";
 
 const LandingPage = () => {
@@ -14,7 +14,7 @@ const LandingPage = () => {
       {user ? (
         <div>
           <TodoContainer />
-         {/*  <WeekOverview /> */}
+          <WeekOverview />
         </div>
       ) : (
         <div>

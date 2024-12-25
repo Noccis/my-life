@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { db, auth } from "../configuration";
+import { db, auth } from "../../../configuration";
 import { addDoc, collection } from "firebase/firestore";
 import { format } from "date-fns";
 
