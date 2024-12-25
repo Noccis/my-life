@@ -1,9 +1,12 @@
 import React, { useState } from "react";
 import { db, auth } from "../configuration";
 import { addDoc, collection } from "firebase/firestore";
+import { format } from "date-fns";
 
 const AddTodo: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
+ 
+  const currentDate = format(new Date(), "EEEE/MM/dd/yyyy");
 
   const handleSave = async () => {
     if (todo.length === 0) {
@@ -18,7 +21,7 @@ const AddTodo: React.FC = () => {
         const userTodosCollection = collection(db, `users/${user.uid}/todos`);
         await addDoc(userTodosCollection, {
           text: todo,
-          createdAt: new Date().toISOString(),
+          createdAt: currentDate,
         });
         console.log("Todo saved!");
         setTodo("");
@@ -32,12 +35,11 @@ const AddTodo: React.FC = () => {
 
   return (
     <div>
-      <h3>Lägg till att göra</h3>
       <input
         type="text"
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
-        placeholder="Skriv texten här..."
+        placeholder="Lägg till att göra"
       />
       <button
         onClick={handleSave}

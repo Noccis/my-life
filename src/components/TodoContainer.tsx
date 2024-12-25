@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { db, auth } from '../configuration';
 import { collection, onSnapshot, deleteDoc, doc } from 'firebase/firestore';
 import AddTodo from './AddTodo';
+import { format } from "date-fns";
 
 interface Todo {
     id: string;
@@ -11,6 +12,7 @@ interface Todo {
 
 const TodoContainer: React.FC = () => {
     const [todos, setTodos] = useState<Todo[]>([]);
+    const currentDay = format(new Date(), "EEEE");
 
   useEffect(() => {
     const user = auth.currentUser;
@@ -43,7 +45,7 @@ const TodoContainer: React.FC = () => {
 
   return (
     <div className='max-width-500'>
-        <h2>Dagens todos:</h2>
+        <h2>{currentDay}</h2>
         <AddTodo />
         <ul className="notes-list">
         {todos.map((todo) => (
