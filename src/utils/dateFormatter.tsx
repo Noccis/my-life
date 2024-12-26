@@ -14,3 +14,6 @@ export const formatDateToSwedish = (date: Date): string => {
     return dateName.charAt(0).toLocaleUpperCase() + dateName.slice(1);
   };
   
+  export const getDate = (date: Date): string => {
+    return date.toLocaleDateString('sv-SE', { day: 'numeric' }); 
+  }

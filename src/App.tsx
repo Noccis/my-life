@@ -6,7 +6,6 @@ import NotesPage from './pages/NotesPage'
 import PrivateRoute from './components/PrivateRoute';
 import { AuthProvider } from './context/AuthContext';
 import ProfilePage from './pages/ProfilePage'
-import Footer from './components/Footer'
 
 function App() {
   return (
@@ -36,7 +35,6 @@ function App() {
         </Routes>
       </main>
       </AuthProvider>
-      <Footer />
     </div>
   )
 }

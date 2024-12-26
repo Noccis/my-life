@@ -1,15 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Mea+Culpa&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
 }
 
 main {
-  height: 80vh;
+  height: 97vh;
 }
 
 #all-content {
   width: 100vw;
   height: 100vh;
+  font-family: "Montserrat", serif;
+  background-color: #EAF1F1;
+}
+
+h1 {
+  font-family: "Mea Culpa", serif;
+  font-weight: 100;
+  font-size: 2.5em;
 }
 
 .list-style-none {
@@ -33,9 +43,13 @@ main {
 */
 
 .button-color {
-  background-color: #A569BD;
+  background-color: #719191;
   color: white;
   border: none;
+}
+
+.bg-white {
+  background-color: white;
 }
 
 /* 
@@ -76,6 +90,10 @@ main {
   margin: 10px 0 10px 0;
 }
 
+.margin-t-b-large {
+  margin: 20px 0 20px 0;
+}
+
 .margin-top {
   margin-top: 10px;
 }
@@ -102,6 +120,14 @@ main {
 
 .content-containers {
   min-height: 300px;
+}
+
+.white-card {
+  min-width:700px;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: rgba(99, 99, 99, 0.4) 0px 2px 8px 0px;
 }
 
 /* 
