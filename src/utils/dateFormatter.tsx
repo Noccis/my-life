@@ -4,10 +4,13 @@ export const formatDateToSwedish = (date: Date): string => {
   };
   
   export const getDayName = (date: Date): string => {
-    return date.toLocaleDateString('sv-SE', { weekday: 'long' }); // Exempel: "onsdag"
+    const dayName = date.toLocaleDateString('sv-SE', { weekday: 'long' }); // Exempel: "onsdag"
+    return dayName.charAt(0).toUpperCase() + dayName.slice(1); // Gör första bokstaven stor
   };
   
+  
   export const getMonthName = (date: Date): string => {
-    return date.toLocaleDateString('sv-SE', { month: 'long' }); // Exempel: "december"
+    const dateName = date.toLocaleDateString('sv-SE', { month: 'long' }); // Exempel: "december"
+    return dateName.charAt(0).toLocaleUpperCase() + dateName.slice(1);
   };
   
