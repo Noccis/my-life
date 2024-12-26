@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 import { db, auth } from "../../../configuration";
 import { addDoc, collection } from "firebase/firestore";
-import { format } from "date-fns";
+import { useSelectedDay } from "../context/selectedDayContext";
 
 const AddTodo: React.FC = () => {
   const [todo, setTodo] = useState<string>("");
- 
-  const currentDate = format(new Date(), "EEEE/MM/dd/yyyy");
+  const { selectedDay } = useSelectedDay();
+  const dateId = selectedDay.toISOString().split("T")[0]; // YYYY-MM-DD
 
   const handleSave = async () => {
     if (todo.length === 0) {
@@ -18,10 +18,13 @@ const AddTodo: React.FC = () => {
 
     if (user) {
       try {
-        const userTodosCollection = collection(db, `users/${user.uid}/todos`);
+        const userTodosCollection = collection(
+          db,
+          `users/${user.uid}/calendarDays/${dateId}/todos`
+        );
         await addDoc(userTodosCollection, {
           text: todo,
-          createdAt: currentDate,
+          createdAt: selectedDay,
         });
         console.log("Todo saved!");
         setTodo("");
@@ -41,11 +44,7 @@ const AddTodo: React.FC = () => {
         onChange={(e) => setTodo(e.target.value)}
         placeholder="Lägg till att göra"
       />
-      <button
-        onClick={handleSave}
-      >
-        Spara
-      </button>
+      <button onClick={handleSave}>Spara</button>
     </div>
   );
 };
