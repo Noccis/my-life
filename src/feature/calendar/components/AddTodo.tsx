@@ -37,14 +37,20 @@ const AddTodo: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="margin-t-b-large">
       <input
+        className="input-form"
         type="text"
         value={todo}
         onChange={(e) => setTodo(e.target.value)}
         placeholder="Lägg till att göra"
       />
-      <button onClick={handleSave}>Spara</button>
+      <button
+        className="input-form margin-left button-color"
+        onClick={handleSave}
+      >
+        Spara
+      </button>
     </div>
   );
 };

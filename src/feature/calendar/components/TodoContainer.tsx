@@ -2,8 +2,9 @@ import React, { useEffect, useState } from 'react';
 import { db, auth } from '../../../configuration';
 import { collection, onSnapshot, deleteDoc, doc } from 'firebase/firestore';
 import AddTodo from './AddTodo';
-import { getDayName, getMonthName } from "../../../utils/dateFormatter"
+import { getDayName, getMonthName, getDate } from "../../../utils/dateFormatter"
 import { useSelectedDay } from "../context/selectedDayContext";
+import "../../../styling/todoContainer.css"
 
 interface Todo {
     id: string;
@@ -46,11 +47,13 @@ const TodoContainer: React.FC = () => {
     };
 
   return (
-    <div className='max-width-500'>
-        <h2>{getDayName(selectedDay)}</h2>
-        <p>{getMonthName(selectedDay)}</p>
+    <div
+    id='todo-container' 
+    className='white-card'>
+        <h3>{getDayName(selectedDay)}</h3>
+        <p className='margin-t-b'>{getDate(selectedDay)} {getMonthName(selectedDay)}</p>
         <AddTodo />
-        <ul className="notes-list">
+        <ul className="notes-list margin-top">
         {todos.map((todo) => (
             <li key={todo.id} className="note-item">
                 <span className="note-text">{todo.text}</span>

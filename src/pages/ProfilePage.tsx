@@ -4,15 +4,13 @@ const ProfilePage = () => {
   return (
     <div
       id="profile-page"
-      className="
-    main-padding 
-    flex-column 
-    flex-align-center 
-    flex-justify-center 
-    content-containers"
+      className="main-padding content-containers"
     >
-      <h2 className="main-padding">Profile</h2>
-      <Authenticator />
+      <div
+        className="flex-column flex-align-center flex-justify-center white-card "
+      >
+        <Authenticator />
+      </div>
     </div>
   );
 };

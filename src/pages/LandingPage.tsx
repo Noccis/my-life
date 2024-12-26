@@ -16,7 +16,7 @@ const LandingPage = () => {
         <div>
           <SelectedDayProvider>
             <TodoContainer />
-            <WeekOverview />
+          {/*   <WeekOverview /> */}
           </SelectedDayProvider>
         </div>
       ) : (
