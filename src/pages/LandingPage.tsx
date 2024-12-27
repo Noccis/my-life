@@ -15,8 +15,8 @@ const LandingPage = () => {
       {user ? (
         <div>
           <SelectedDayProvider>
+            <WeekOverview />
             <TodoContainer />
-          {/*   <WeekOverview /> */}
           </SelectedDayProvider>
         </div>
       ) : (
