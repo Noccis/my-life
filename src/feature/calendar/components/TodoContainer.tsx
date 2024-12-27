@@ -32,7 +32,7 @@ const TodoContainer: React.FC = () => {
 
       return () => unsubscribe(); // Rensa lyssnaren vid avmontering
     }
-  }, []);
+  }, [selectedDay]);
 
     const deleteTodo = async (id: string) => {
       const user = auth.currentUser;
