@@ -24,7 +24,7 @@ const WeekOverview: React.FC = () => {
   return (
     <div
       id="week-overview"
-      className="flex-row flex-align-center flex-justify-center"
+      className="flex-row flex-align-center flex-justify-center max-width-700"
     >
       {weekDates.map((date, index) => (
         <div

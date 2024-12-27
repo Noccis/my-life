@@ -34,8 +34,16 @@ h1 {
     Widths
 */
 
+.min-width-700 {
+  min-width: 700px;
+}
+
 .max-width-500 {
   max-width: 500px;
+}
+
+.max-width-700 {
+  max-width: 700px;
 }
 
 /* 
@@ -123,8 +131,7 @@ h1 {
 }
 
 .white-card {
-  min-width:700px;
-  padding: 10px;
+  padding: 20px;
   border-radius: 10px;
   background-color: white;
   box-shadow: rgba(99, 99, 99, 0.4) 0px 2px 8px 0px;

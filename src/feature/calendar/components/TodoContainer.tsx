@@ -49,7 +49,7 @@ const TodoContainer: React.FC = () => {
   return (
     <div
     id='todo-container' 
-    className='white-card'>
+    className='white-card max-width-700'>
         <h3>{getDayName(selectedDay)}</h3>
         <p className='margin-t-b'>{getDate(selectedDay)} {getMonthName(selectedDay)}</p>
         <AddTodo />
