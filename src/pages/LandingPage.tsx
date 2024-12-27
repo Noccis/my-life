@@ -1,6 +1,8 @@
 import Authenticator from "../components/Authenticator";
-import WeekOverview from "../components/WeekOverview";
+import TodoContainer from "../feature/calendar/components/TodoContainer";
+import WeekOverview from "../feature/calendar/components/WeekOverview";
 import { useAuth } from "../context/AuthContext";
+import { SelectedDayProvider } from "../feature/calendar/context/selectedDayContext";
 
 const LandingPage = () => {
   const { user } = useAuth();
@@ -11,7 +13,12 @@ const LandingPage = () => {
       className="main-padding flex-row flex-align-center flex-justify-center content-containers"
     >
       {user ? (
-        <WeekOverview />
+        <div>
+          <SelectedDayProvider>
+            <WeekOverview />
+            <TodoContainer />
+          </SelectedDayProvider>
+        </div>
       ) : (
         <div>
           <h3 className="margin-bottom-large">

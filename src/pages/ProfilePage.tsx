@@ -2,17 +2,10 @@ import Authenticator from "../components/Authenticator";
 
 const ProfilePage = () => {
   return (
-    <div
-      id="profile-page"
-      className="
-    main-padding 
-    flex-column 
-    flex-align-center 
-    flex-justify-center 
-    content-containers"
-    >
-      <h2 className="main-padding">Profile</h2>
-      <Authenticator />
+    <div id="profile-page" className="main-padding content-containers">
+      <div className="flex-column flex-align-center flex-justify-center white-card ">
+        <Authenticator />
+      </div>
     </div>
   );
 };
