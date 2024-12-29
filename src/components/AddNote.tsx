@@ -21,7 +21,6 @@ const AddNote: React.FC = () => {
           text: note,
           createdAt: new Date().toISOString(),
         });
-        setMessage("Note saved successfully!");
         setNote("");
       } catch (error) {
         console.error("Error saving note:", error);
