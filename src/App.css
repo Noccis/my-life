@@ -166,6 +166,15 @@ h1 {
   background-color: #f1f1f1;
 }
 
+.note-item.done {
+  background-color: #e0e0e0;
+  text-decoration: line-through;
+}
+
+.checkbox {
+  margin-right: 10px;
+}
+
 .note-text {
   flex-grow: 1;
 }
@@ -178,8 +187,21 @@ h1 {
   cursor: pointer;
   font-size: 18px;
   padding: 0;
+  display: inline;
 }
 
 .note-item:hover .delete-btn {
   display: block;
+}
+
+/*
+  Activate delete button
+*/
+
+.top-right-corner {
+  position: absolute; /* Tillåter placering inom parent */
+  top: 0; /* Placera i det övre hörnet */
+  right: 0; /* Placera i det högra hörnet */
+  padding: 10px;
+  margin: 10px;
 }
